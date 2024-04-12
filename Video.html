@@ -3,7 +3,7 @@
   <head>
     <title>Rick-Roll</title>
     <style>
-      {
+      body {
         margin: 0;
         padding: 0;
         height: 100%;
@@ -27,10 +27,12 @@
       document.addEventListener('DOMContentLoaded', function() {
         var video = document.getElementById('my-video');
         video.muted = false;
-        video.play ();
+        video.play();
         if (Video.paused) {
           video.play;
         }
+        video.addEventListener('loadeddata', function() {
+        video.play();
       });
     </script>
   </body>
